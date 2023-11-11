@@ -12,10 +12,19 @@ class Laboratory:
                 self.catalysts.append(reagent)
 
     def refine_reagents(self):
+        refined_herbs = []
+        refined_catalysts = []
+
         for herb in self.herbs:
             herb.refine()
+            refined_herbs.append(Herb(herb.name, herb.potency))  # Add refined herb to the list
+
         for catalyst in self.catalysts:
             catalyst.refine()
+            refined_catalysts.append(Catalyst(catalyst.name, catalyst.potency, catalyst.quality))  # Add refined catalyst to the list
+
+        self.herbs = refined_herbs  # Update the herbs list with refined herbs
+        self.catalysts = refined_catalysts  # Update the catalysts list with refined catalysts
 
     def mix_potion(self, first_ingredient, second_ingredient):
         if isinstance(first_ingredient, Herb) and isinstance(second_ingredient, Catalyst):
