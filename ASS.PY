@@ -88,7 +88,7 @@ herb_data = {
     "Irit": 1.0, "Kwuarm": 1.2, "Lantadyme": 2.0, "Torstol": 4.5
 }
 
-catalyst_data = []
+catalyst_data={}
     "Eye of Newt": (4.3, 1.0), "Limpwurt Root": (3.6, 1.7), "White Berries": (1.2, 2.0),
     "Potato Cactus": (7.3, 0.1), "Wine of Zamorak": (1.7, 5.0), "Blood of Orcus": (4.5, 2.2),
     "Ground Mud Rune": (2.1, 6.7), "Grenwall Spike": (6.3, 4.9), "Ground Miasma Rune": (3.3, 5.2)
