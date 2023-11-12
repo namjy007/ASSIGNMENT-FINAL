@@ -23,8 +23,8 @@ class Laboratory:
             catalyst.refine()
             refined_catalysts.append(Catalyst(catalyst.name, catalyst.potency, catalyst.quality))  # Add refined catalyst to the list
 
-        self.herbs = refined_herbs  # Update the herbs list with refined herbs
-        self.catalysts = refined_catalysts  # Update the catalysts list with refined catalysts
+        self.herbs += refined_herbs  # Append refined herbs to the existing herbs list
+        self.catalysts += refined_catalysts  # Append refined catalysts to the existing catalysts list
 
     def mix_potion(self, first_ingredient, second_ingredient):
         if isinstance(first_ingredient, Herb) and isinstance(second_ingredient, Catalyst):
@@ -88,7 +88,7 @@ herb_data = {
     "Irit": 1.0, "Kwuarm": 1.2, "Lantadyme": 2.0, "Torstol": 4.5
 }
 
-catalyst_data = {
+catalyst_data = []
     "Eye of Newt": (4.3, 1.0), "Limpwurt Root": (3.6, 1.7), "White Berries": (1.2, 2.0),
     "Potato Cactus": (7.3, 0.1), "Wine of Zamorak": (1.7, 5.0), "Blood of Orcus": (4.5, 2.2),
     "Ground Mud Rune": (2.1, 6.7), "Grenwall Spike": (6.3, 4.9), "Ground Miasma Rune": (3.3, 5.2)
